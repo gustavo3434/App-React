@@ -5,10 +5,10 @@ import tiktok from './images/tiktok.svg'
 
 const Footer = () => {
     return (
-        <div style={{marginTop: 120}}>
+        <div style={{marginTop: 120, backgroundColor: '#3b3b3b'}}>
             <div className="container text-light">
                 <div className="row">
-                    <div className="col">
+                    <div className="col mt-3">
                         <h5 className="" style={{color: "green"}}>¡Contactanos!</h5>
                         <ul className="list-inline fs-6">
                             <li className="mt-3">Av 9 de Julio 127 Centro (Córdoba)</li>
@@ -16,7 +16,7 @@ const Footer = () => {
                             <li className="mt-3">Empresas@CompraTech.com.ar</li>
                         </ul>
                     </div>
-                    <div className="col">
+                    <div className="col mt-3">
                     <h5 className="" style={{color: "green"}}>
                         Nuestros Horarios</h5>
                         <ul className="list-inline fs-6">
@@ -28,7 +28,7 @@ const Footer = () => {
                             <li>Sab 10:00 AM - 14:30 PM</li>
                         </ul>
                     </div>
-                    <div className="col">
+                    <div className="col mt-3">
                         <h5 style={{color: "green"}}>
                             Seguinos en las Redes</h5>
                         <a href={"/"}> <img className='ms-4 mt-3' src={insta} width={26} alt="" /></a>
