@@ -8,22 +8,28 @@ import Footer from './components/Footer';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
+import CartContextProvider from './components/CartContext';
+import Cart from './components/Cart';
+import Formulario from './components/Formulario';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div>
-        <NavBar/>
-        <Routes>
-          <Route path={"/"} element={<div> <Carousel/> <Recomendados/> <Destacados/> <ItemListContainer/> </div>}/>
-          <Route path={"/category/:id"} element={ <div><ItemListContainer/></div> }/>
-          <Route path={`/item/:id`} element={<ItemDetailContainer/>}/>
-        </Routes>
-        <Promo/>
-        <Footer/>
-      </div>
-    </BrowserRouter>
-    
+    <CartContextProvider>
+      <BrowserRouter>
+        <div>
+          <NavBar/>
+          <Routes>
+            <Route path={"/"} element={<div> <Carousel/> <Recomendados/> <Destacados/> <ItemListContainer/> </div>}/>
+            <Route path={"/category/:id"} element={ <div><ItemListContainer/></div> }/>
+            <Route path={`/item/:id`} element={<ItemDetailContainer/>}/>
+            <Route path={`/carrito`} element={<Cart/>}/>
+            <Route path={`/formularioCompra`} element={<Formulario/>} />
+          </Routes>
+          <Promo/>
+          <Footer/>
+        </div>
+      </BrowserRouter>
+    </CartContextProvider>
   );
 }
 
