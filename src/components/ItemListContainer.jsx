@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom"
 import ItemList from "./ItemList";
+import "./Destacados.css"
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
+import NavBar from "./NavBar";
 
 
 const ItemListContainer = () => {
@@ -46,6 +48,9 @@ const ItemListContainer = () => {
             <a href={"/"} tabindex="-1" className='btn disabled placeholder col-1' style={{marginLeft:75, height:1, backgroundColor: 'green'}} ariaHidden="true"> </a>
             <div className="container text-center mt-2">
                 <ItemList items={items}/>
+                <div class="invisible"> 
+                    <NavBar items={items}/>
+                </div>
             </div>
         </div>
         
