@@ -1,7 +1,6 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import Carousel  from "./components/Carousel";
-import Destacados from './components/Destacados';
 import Recomendados from './components/Recomendados';
 import Promo from './components/Promo';
 import Footer from './components/Footer';
@@ -12,6 +11,7 @@ import CartContextProvider from './components/CartContext';
 import Cart from './components/Cart';
 import Formulario from './components/Formulario';
 
+
 const App = () => {
   return (
     <CartContextProvider>
@@ -19,7 +19,7 @@ const App = () => {
         <div>
           <NavBar/>
           <Routes>
-            <Route path={"/"} element={<div> <Carousel/> <Recomendados/> <Destacados/> <ItemListContainer/> </div>}/>
+            <Route path={"/"} element={<div> <Carousel/> <Recomendados/> <ItemListContainer/> </div>}/>
             <Route path={"/category/:id"} element={ <div><ItemListContainer/></div> }/>
             <Route path={`/item/:id`} element={<ItemDetailContainer/>}/>
             <Route path={`/carrito`} element={<Cart/>}/>
